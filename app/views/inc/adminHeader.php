@@ -29,18 +29,34 @@
 
   </style>
 </head>
-<nav class="navbar-container">
+
+<nav class="navbar-container nav-admin">
     <div class="left">
-      <h2 class="logo">Hachami_Avito </h2>
+      <h2 class="logo">DASHBOARD</h2>
+    </div>
+    <div class="center">
+        <ul>
+            <li>
+                <img src="<?php echo URLROOT; ?>/img/home-icon.png" >
+                <a href="<?php echo URLROOT; ?>/admin">Home</a>
+            </li>
+            <li>
+                <img src="<?php echo URLROOT; ?>/img/icons-users.png" >
+                <a href="<?php echo URLROOT; ?>/admin/users">Users</a>
+            </li>
+            
+        </ul>
     </div>
     <div class="right">
-      <?php if(isset($_SESSION['user_id'])) : ?>
-      <a href="<?php echo URLROOT; ?>/users/profile/<?php echo $_SESSION['user_id'];?>"><img src="<?php echo URLROOT . "/img/" . $_SESSION['user_img']; ?>" alt="" srcset="" class="profile-img"></a>
+      <?php if(isset($_SESSION['admin_id'])  ) : ?>
+          <a href="<?php echo URLROOT . "/users/profile/" . $_SESSION['admin_id']; ?>"><img src="<?php echo URLROOT . "/img/" . $_SESSION['admin_img']; ?>" alt="" srcset="" class="profile-img"></a>
           <a class="login-btn" href="<?php echo URLROOT; ?>/users/logout">Logout</a>
       <?php else : ?>
-      <a class="sign-btn" href="<?php echo URLROOT; ?>/users/register">Sign In</a>
-      <a class="login-btn" href="<?php echo URLROOT; ?>/users/login">Login In</a>
-      <?php endif; ?>
+          <img src="<?php echo URLROOT . "/img/" . $_SESSION['user_img']; ?>" alt="" srcset="" class="profile-img">
+          <a class="login-btn" href="<?php echo URLROOT; ?>/users/logout">Logout</a>
+        <?php endif; ?>
+      
+      
     </div>
     
 </nav>
