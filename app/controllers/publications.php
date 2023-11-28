@@ -77,7 +77,7 @@
                   }
               } else {
                   // Handle invalid file type
-                  $data['image_err'] = 'Invalid file type. Please upload a JPEG, PNG, or GIF image.';
+                  $data['image_err'] = 'Invalid file type. Please upload a PNG, JPEG, and GIF image.';
               }
           } else {
               // Handle file upload error

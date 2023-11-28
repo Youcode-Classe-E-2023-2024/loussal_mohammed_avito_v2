@@ -38,7 +38,7 @@
         } else {
           // Check email
           if($this->userModel->findUserByEmail($data['email'])){
-            $data['email_err'] = 'Email is already taken';
+            $data['email_err'] = 'this Email is already taken';
           }
         }
 
@@ -54,17 +54,17 @@
 
         // Validate Password
         if(empty($data['password'])){
-          $data['password_err'] = 'Pleae enter password';
+          $data['password_err'] = 'Please enter password';
         } elseif(strlen($data['password']) < 6){
           $data['password_err'] = 'Password must be at least 6 characters';
         }
 
         // Validate Confirm Password
         if(empty($data['confirm_password'])){
-          $data['confirm_password_err'] = 'Pleae confirm password';
+          $data['confirm_password_err'] = 'Please confirm password';
         } else {
           if($data['password'] != $data['confirm_password']){
-            $data['confirm_password_err'] = 'Passwords do not match';
+            $data['confirm_password_err'] = 'Passwords doe\'s not match';
           }
         }
 
