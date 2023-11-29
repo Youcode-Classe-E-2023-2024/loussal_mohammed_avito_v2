@@ -42,13 +42,13 @@ Before you begin, ensure you have the following requirements installed on your s
 
   2.Create a new branch:
 
-      git checkout -b feature/your-feature-name
+       git checkout -b feature/your-feature-name
   3.Make your changes and commit them:
 
        git commit -m "Add your commit message here"
   4.Push to the branch:
 
-    git push origin feature/your-feature-name
+       git push origin feature/your-feature-name
 
 ## License:
 
